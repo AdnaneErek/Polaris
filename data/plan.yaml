@@ -1,0 +1,673 @@
+meta:
+  org: "BankXCIB - TBS - CMS (synthetic PoC)"
+  perimeter:
+    business_line: "Transaction Banking Services"
+    domain: "Cash Management Services"
+    scope: "IT & Operations"
+  horizon:
+    start: "2026-01-01"
+    end: "2028-12-31"
+    cadence: "monthly"              # reporting cadence
+  version: "0.2"
+  authors: ["Adnane (PoC)"]
+  last_updated: "2026-01-15"
+  assumptions:
+    - "All data is synthetic; structure mirrors enterprise reality."
+    - "No autonomous execution; human-in-the-loop required for changes."
+  governance:
+    decision_rights:
+      propose: ["AI-Agent", "PMO"]
+      approve: ["Transformation Lead", "IT Ops Head", "Risk/Compliance"]
+      execute: ["Delivery Teams"]
+    auditability:
+      log_all_recommendations: true
+      store_inputs_hashes: true
+      rationale_required: true
+    guardrails:
+      - "No recommendation can violate regulatory constraints."
+      - "No recommendation can reduce control coverage below threshold."
+      - "High-impact actions require dual approval."
+
+# ---------------------------------------------------------------------
+# KPI CATALOG (with definitions + formulas + data sources)
+# ---------------------------------------------------------------------
+kpis:
+  - id: KPI_STP
+    name: "Straight-Through Processing rate"
+    short_name: "STP_rate"
+    unit: "%"
+    frequency: "monthly"
+    baseline:
+      value: 82.0
+      date: "2025-12-31"
+    target:
+      value: 95.0
+      deadline: "2028-12-31"
+      direction: "up"
+    definition:
+      description: "Share of eligible transactions processed end-to-end without manual intervention."
+      formula: "100 * (count_auto_processed / count_eligible)"
+      exclusions:
+        - "Non-eligible flows (manual-only products)"
+        - "Transactions flagged for compliance review"
+    data_lineage:
+      sources:
+        - system: "Payments Engine"
+          table_or_stream: "tx_events"
+        - system: "Ops Tool"
+          table_or_stream: "manual_interventions"
+      quality_rules:
+        - rule: "Eligible count must be >= auto processed"
+          severity: "high"
+        - rule: "Missing intervention flag < 0.5%"
+          severity: "medium"
+    owner:
+      business: "Ops"
+      data: "Data Office"
+    risk_classification: "medium"
+
+  - id: KPI_E2E
+    name: "End-to-End Processing Time (priority flows)"
+    short_name: "processing_time"
+    unit: "hours"
+    frequency: "monthly"
+    baseline:
+      value: 2.6
+      date: "2025-12-31"
+    target:
+      value: 1.5
+      deadline: "2028-12-31"
+      direction: "down"
+    definition:
+      description: "Median time from initiation to posting for priority flows."
+      formula: "median(posting_ts - initiation_ts) in hours"
+      scope: "priority flows"
+    data_lineage:
+      sources:
+        - system: "Front Office"
+          table_or_stream: "initiation_events"
+        - system: "Core Banking"
+          table_or_stream: "posting_events"
+      quality_rules:
+        - rule: "Timestamps must be consistent (posting >= initiation)"
+          severity: "high"
+    owner:
+      business: "Ops"
+      data: "IOS Data"
+    risk_classification: "low"
+
+  - id: KPI_INC
+    name: "Production Incidents impacting CMS services"
+    short_name: "incident_count"
+    unit: "count"
+    frequency: "monthly"
+    baseline:
+      value: 35.0
+      date: "2025-12-31"
+    target:
+      value: 20.0
+      deadline: "2028-12-31"
+      direction: "down"
+    definition:
+      description: "Count of Sev1–Sev3 incidents impacting CMS processes."
+      formula: "count(incidents where severity in {1,2,3} and impact=CMS)"
+    data_lineage:
+      sources:
+        - system: "ServiceNow"
+          table_or_stream: "incidents"
+      quality_rules:
+        - rule: "Severity must be present"
+          severity: "high"
+    owner:
+      business: "IT Ops"
+      data: "ITSM"
+    risk_classification: "high"
+
+# ---------------------------------------------------------------------
+# STRATEGIC OBJECTIVES (with weights, OKRs, and constraints)
+# ---------------------------------------------------------------------
+objectives:
+  - id: OBJ_1
+    name: "Increase automation and straight-through processing"
+    description: "Improve STP to reduce manual workload, errors, and cost."
+    weight: 0.40
+    okrs:
+      - id: OKR_1_1
+        kpi_id: KPI_STP
+        baseline: 82.0
+        target: 95.0
+        deadline: "2028-12-31"
+        direction: "up"
+        trajectory:
+          type: "linear"            # linear, piecewise, s-curve
+          checkpoints:
+            - date: "2026-01-01"
+              expected: 82.0
+            - date: "2026-12-31"
+              expected: 86.0
+            - date: "2027-12-31"
+              expected: 91.0
+            - date: "2028-12-31"
+              expected: 95.0
+    constraints:
+      - type: "compliance"
+        description: "Automation must not bypass compliance checks or AML triggers."
+      - type: "control_coverage"
+        description: "Control coverage must remain >= 95% for automated flows."
+
+  - id: OBJ_2
+    name: "Reduce processing time and improve client experience"
+    description: "Reduce cycle time of priority flows by process redesign and digitalization."
+    weight: 0.35
+    okrs:
+      - id: OKR_2_1
+        kpi_id: KPI_E2E
+        baseline: 2.6
+        target: 1.5
+        deadline: "2028-12-31"
+        direction: "down"
+        trajectory:
+          type: "piecewise"
+          checkpoints:
+            - date: "2026-01-01"
+              expected: 2.6
+            - date: "2026-12-31"
+              expected: 2.3
+            - date: "2027-12-31"
+              expected: 1.9
+            - date: "2028-12-31"
+              expected: 1.5
+    constraints:
+      - type: "availability"
+        description: "No material degradation of system availability (SLA maintained)."
+
+  - id: OBJ_3
+    name: "Strengthen operational resilience and risk control"
+    description: "Reduce production incidents and improve observability and recovery."
+    weight: 0.25
+    okrs:
+      - id: OKR_3_1
+        kpi_id: KPI_INC
+        baseline: 35.0
+        target: 20.0
+        deadline: "2028-12-31"
+        direction: "down"
+        trajectory:
+          type: "linear"
+          checkpoints:
+            - date: "2026-01-01"
+              expected: 35.0
+            - date: "2026-12-31"
+              expected: 30.0
+            - date: "2027-12-31"
+              expected: 24.0
+            - date: "2028-12-31"
+              expected: 20.0
+    constraints:
+      - type: "regulatory"
+        description: "Must satisfy audit requirements and evidence retention."
+
+# ---------------------------------------------------------------------
+# CAPABILITY MAP (transformation domains)
+# ---------------------------------------------------------------------
+capabilities:
+  - id: CAP_PROC
+    name: "Process Excellence"
+    description: "Process mining, redesign, lean controls"
+  - id: CAP_DATA
+    name: "Data & AI Enablement"
+    description: "Data quality, lineage, AI integration, model governance"
+  - id: CAP_TECH
+    name: "IT Modernization"
+    description: "Architecture, observability, reliability engineering"
+  - id: CAP_PEOPLE
+    name: "People & Change"
+    description: "Training, adoption, operating model"
+
+# ---------------------------------------------------------------------
+# INITIATIVES (with milestones, dependencies, RACI, risks, benefits)
+# ---------------------------------------------------------------------
+initiatives:
+  - id: INIT_A1
+    name: "Automation Wave 1 (priority flows)"
+    description: "Automation of priority CMS flows with safe controls."
+    objective_ids: ["OBJ_1", "OBJ_2"]
+    capability_ids: ["CAP_PROC", "CAP_TECH", "CAP_DATA"]
+    owner: "IT Ops"
+    sponsor: "CMS Transformation"
+    raci:
+      responsible: ["Automation Squad"]
+      accountable: ["IT Ops Head"]
+      consulted: ["Risk", "Compliance", "Data Office"]
+      informed: ["Operations", "Front Office"]
+    timeline:
+      start: "2026-02-01"
+      end: "2027-06-30"
+      phase: "delivery"
+    budget:
+      currency: "EUR"
+      amount_k: 600
+      capex_opex_split: {capex: 0.55, opex: 0.45}
+    dependencies:
+      - type: "hard"
+        initiative_id: "INIT_DQ1"
+        rationale: "Automation needs stable reference data and DQ controls."
+    workstreams:
+      - id: WS_A1_CTRL
+        name: "Controls-by-design for automated flows"
+        description: "Define preventive/detective controls and reconciliation patterns before automation rollout."
+        owner: "Ops Control Lead"
+        start: "2026-02-01"
+        end: "2026-06-30"
+        effort_fte_months: 7.0
+        deliverables:
+          - id: D_A1_CTRL_1
+            name: "Control matrix v1 for top 20 flows"
+            due: "2026-04-15"
+            owner: "Ops Control Lead"
+            definition_of_done: ["Risk sign-off completed", "Control owners assigned"]
+            operational_kpis: ["KPI_INC"]
+          - id: D_A1_CTRL_2
+            name: "Reconciliation SOP and exception workflow"
+            due: "2026-06-30"
+            owner: "Operations Manager"
+            definition_of_done: ["Runbook approved", "SLA defined for exception closure"]
+            operational_kpis: ["KPI_INC", "KPI_E2E"]
+        control_impacts: ["Improves control coverage on automated flows", "Reduces operational incident severity"]
+        depends_on_workstreams: ["WS_DQ1_RULES"]
+      - id: WS_A1_BUILD
+        name: "Automation build and orchestration"
+        description: "Implement automation for prioritized CMS flows with observability hooks."
+        owner: "Automation Squad Lead"
+        start: "2026-04-01"
+        end: "2027-03-31"
+        effort_fte_months: 14.0
+        deliverables:
+          - id: D_A1_BUILD_1
+            name: "Pilot automations for top 5 flows"
+            due: "2026-10-31"
+            owner: "Automation Squad Lead"
+            definition_of_done: ["Production deployment complete", "Rollback validated"]
+            operational_kpis: ["KPI_STP", "KPI_E2E"]
+          - id: D_A1_BUILD_2
+            name: "Scale-out package for next 15 flows"
+            due: "2027-03-31"
+            owner: "Automation Squad Lead"
+            definition_of_done: ["Flow templates standardized", "Monitoring integrated"]
+            operational_kpis: ["KPI_STP"]
+        control_impacts: ["Improves STP by reducing manual handoffs"]
+        depends_on_workstreams: ["WS_DQ1_LINEAGE", "WS_RES1_OBS"]
+      - id: WS_A1_UAT
+        name: "UAT, adoption and operating model transition"
+        description: "Drive business UAT, training, and handover to BAU operations."
+        owner: "Business Change Manager"
+        start: "2026-09-01"
+        end: "2027-06-30"
+        effort_fte_months: 8.0
+        deliverables:
+          - id: D_A1_UAT_1
+            name: "UAT sign-off for pilot scope"
+            due: "2026-12-15"
+            owner: "Business Change Manager"
+            definition_of_done: ["Business sign-off complete", "Known issues triaged"]
+            operational_kpis: ["KPI_E2E"]
+          - id: D_A1_UAT_2
+            name: "Training and SOP update for scale scope"
+            due: "2027-06-30"
+            owner: "Operations Manager"
+            definition_of_done: ["Training completion >90%", "SOP published"]
+            operational_kpis: ["KPI_STP", "KPI_INC"]
+        control_impacts: ["Reduces change risk during scale-up"]
+        depends_on_workstreams: ["WS_A1_BUILD"]
+    milestones:
+      - id: MS_A1_1
+        name: "Process baseline & control design"
+        due: "2026-04-30"
+        deliverables: ["As-is map", "Control matrix", "Automation candidates"]
+      - id: MS_A1_2
+        name: "Pilot automation deployed"
+        due: "2026-10-31"
+        deliverables: ["Pilot in prod", "Runbook", "Monitoring dashboards"]
+      - id: MS_A1_3
+        name: "Scale-out wave completed"
+        due: "2027-06-30"
+        deliverables: ["Scaled automation", "Lessons learned", "Updated SOP"]
+    kpi_impacts:
+      - kpi_id: KPI_STP
+        expected_delta_by_end: +8.0
+        confidence: 0.70
+        lag_months: 2
+      - kpi_id: KPI_E2E
+        expected_delta_by_end: -0.5
+        confidence: 0.65
+        lag_months: 3
+    benefits:
+      - type: "efficiency"
+        description: "Reduce manual effort and rework"
+        estimate:
+          unit: "FTE"
+          value: 6.0
+          confidence: 0.60
+      - type: "quality"
+        description: "Reduce manual errors and operational losses"
+        estimate:
+          unit: "index"
+          value: 0.20
+          confidence: 0.50
+    risks:
+      - id: R_A1_1
+        category: "operational"
+        description: "Automation may increase undetected errors if controls are weak."
+        likelihood: 0.35
+        impact: 0.70
+        mitigations:
+          - "Control matrix + reconciliation"
+          - "Shadow mode during pilot"
+      - id: R_A1_2
+        category: "delivery"
+        description: "Dependency INIT_DQ1 delay blocks automation scale-out."
+        likelihood: 0.45
+        impact: 0.60
+        mitigations:
+          - "Split scope: automate flows with stable reference data first"
+    compliance_controls:
+      - "AML screening remains mandatory"
+      - "Evidence retention for automated decisions"
+
+  - id: INIT_DQ1
+    name: "Data Quality & Reference Alignment"
+    description: "Improve data quality, reference data alignment, and KPI reliability."
+    objective_ids: ["OBJ_1"]
+    capability_ids: ["CAP_DATA"]
+    owner: "Data"
+    sponsor: "IOS Data"
+    raci:
+      responsible: ["Data Engineering Team"]
+      accountable: ["Data Lead"]
+      consulted: ["IT Ops", "Risk"]
+      informed: ["PMO"]
+    timeline:
+      start: "2026-01-15"
+      end: "2026-10-31"
+      phase: "delivery"
+    budget:
+      currency: "EUR"
+      amount_k: 250
+      capex_opex_split: {capex: 0.30, opex: 0.70}
+    dependencies: []
+    workstreams:
+      - id: WS_DQ1_RULES
+        name: "DQ rules and ownership model"
+        description: "Define critical data quality rules, ownership, and escalation process."
+        owner: "Data Governance Lead"
+        start: "2026-01-15"
+        end: "2026-04-30"
+        effort_fte_months: 4.5
+        deliverables:
+          - id: D_DQ1_RULES_1
+            name: "Critical data elements and thresholds"
+            due: "2026-03-15"
+            owner: "Data Governance Lead"
+            definition_of_done: ["Top 30 elements approved", "Thresholds signed off"]
+            operational_kpis: ["KPI_STP"]
+          - id: D_DQ1_RULES_2
+            name: "Data ownership and escalation RACI"
+            due: "2026-04-30"
+            owner: "Data Lead"
+            definition_of_done: ["Ownership matrix complete", "Escalation path tested"]
+            operational_kpis: ["KPI_STP", "KPI_INC"]
+        control_impacts: ["Improves data control accountability"]
+        depends_on_workstreams: []
+      - id: WS_DQ1_LINEAGE
+        name: "Lineage and DQ monitoring instrumentation"
+        description: "Implement lineage and DQ checks in ingestion/transform pipelines."
+        owner: "Data Engineering Lead"
+        start: "2026-03-01"
+        end: "2026-07-31"
+        effort_fte_months: 6.0
+        deliverables:
+          - id: D_DQ1_LINEAGE_1
+            name: "End-to-end lineage for KPI feeds"
+            due: "2026-06-15"
+            owner: "Data Engineering Lead"
+            definition_of_done: ["Lineage coverage >85%", "Critical gaps documented"]
+            operational_kpis: ["KPI_STP"]
+          - id: D_DQ1_LINEAGE_2
+            name: "Automated DQ alerting in ETL"
+            due: "2026-07-31"
+            owner: "Data Engineering Lead"
+            definition_of_done: ["Alerting in production", "False positive rate tracked"]
+            operational_kpis: ["KPI_STP", "KPI_INC"]
+        control_impacts: ["Improves early detection of data breaks"]
+        depends_on_workstreams: ["WS_DQ1_RULES"]
+      - id: WS_DQ1_REMED
+        name: "Reference data remediation and alignment"
+        description: "Clean and align reference mappings consumed by automation flows."
+        owner: "Reference Data Manager"
+        start: "2026-05-01"
+        end: "2026-10-31"
+        effort_fte_months: 5.0
+        deliverables:
+          - id: D_DQ1_REMED_1
+            name: "Reference mapping remediation wave 1"
+            due: "2026-08-31"
+            owner: "Reference Data Manager"
+            definition_of_done: ["Top 10 mapping defects fixed", "Business validation complete"]
+            operational_kpis: ["KPI_STP", "KPI_E2E"]
+          - id: D_DQ1_REMED_2
+            name: "Reference alignment final sign-off"
+            due: "2026-10-31"
+            owner: "Data Lead"
+            definition_of_done: ["Residual critical defects = 0", "Sign-off archived"]
+            operational_kpis: ["KPI_STP"]
+        control_impacts: ["Stabilizes upstream data consumed by automation"]
+        depends_on_workstreams: ["WS_DQ1_LINEAGE"]
+    milestones:
+      - id: MS_DQ1_1
+        name: "DQ rules defined & approved"
+        due: "2026-03-31"
+        deliverables: ["DQ rules", "DQ ownership", "DQ dashboards"]
+      - id: MS_DQ1_2
+        name: "DQ pipeline in place"
+        due: "2026-07-31"
+        deliverables: ["DQ checks in ETL", "Alerting", "Lineage documentation"]
+      - id: MS_DQ1_3
+        name: "Reference alignment completed"
+        due: "2026-10-31"
+        deliverables: ["Reference mappings", "Sign-off", "Change procedure"]
+    kpi_impacts:
+      - kpi_id: KPI_STP
+        expected_delta_by_end: +3.0
+        confidence: 0.55
+        lag_months: 1
+    risks:
+      - id: R_DQ1_1
+        category: "data"
+        description: "Hidden data quality issues delay KPI reliability."
+        likelihood: 0.50
+        impact: 0.55
+        mitigations:
+          - "Prioritize top 3 data sources"
+          - "Iterative rollout of DQ rules"
+
+  - id: INIT_RES1
+    name: "Observability & Incident Reduction"
+    description: "Strengthen monitoring, alerting, and recovery playbooks."
+    objective_ids: ["OBJ_3"]
+    capability_ids: ["CAP_TECH"]
+    owner: "Ops"
+    sponsor: "IT Ops Head"
+    raci:
+      responsible: ["SRE/Observability Team"]
+      accountable: ["Ops Manager"]
+      consulted: ["Security", "Risk"]
+      informed: ["PMO", "Operations"]
+    timeline:
+      start: "2026-03-01"
+      end: "2027-12-31"
+      phase: "delivery"
+    budget:
+      currency: "EUR"
+      amount_k: 400
+      capex_opex_split: {capex: 0.40, opex: 0.60}
+    dependencies: []
+    workstreams:
+      - id: WS_RES1_OBS
+        name: "Observability coverage expansion"
+        description: "Expand telemetry, alert taxonomy, and service-level dashboards."
+        owner: "SRE Lead"
+        start: "2026-03-01"
+        end: "2026-09-30"
+        effort_fte_months: 7.5
+        deliverables:
+          - id: D_RES1_OBS_1
+            name: "Telemetry baseline for critical services"
+            due: "2026-05-31"
+            owner: "SRE Lead"
+            definition_of_done: ["Coverage matrix published", "Critical alert gaps identified"]
+            operational_kpis: ["KPI_INC"]
+          - id: D_RES1_OBS_2
+            name: "Alert taxonomy and dashboard standardization"
+            due: "2026-09-30"
+            owner: "SRE Lead"
+            definition_of_done: ["Unified taxonomy live", "Dashboard adoption >80%"]
+            operational_kpis: ["KPI_INC", "KPI_E2E"]
+        control_impacts: ["Improves MTTR and incident detectability"]
+        depends_on_workstreams: []
+      - id: WS_RES1_RUN
+        name: "Incident playbooks and on-call hardening"
+        description: "Standardize runbooks, escalation, and post-mortem mechanics."
+        owner: "Operations Reliability Manager"
+        start: "2026-06-01"
+        end: "2027-02-28"
+        effort_fte_months: 6.5
+        deliverables:
+          - id: D_RES1_RUN_1
+            name: "Runbook library for P1/P2 incidents"
+            due: "2026-11-30"
+            owner: "Operations Reliability Manager"
+            definition_of_done: ["Runbooks for top 15 incident types", "On-call drill completed"]
+            operational_kpis: ["KPI_INC"]
+          - id: D_RES1_RUN_2
+            name: "Post-mortem governance cadence"
+            due: "2027-02-28"
+            owner: "Ops Manager"
+            definition_of_done: ["Monthly governance in place", "Actions tracked to closure"]
+            operational_kpis: ["KPI_INC", "KPI_E2E"]
+        control_impacts: ["Improves incident response discipline"]
+        depends_on_workstreams: ["WS_RES1_OBS"]
+      - id: WS_RES1_SLO
+        name: "SLO adoption and error budget policy"
+        description: "Institutionalize SLOs and error budget decisions across teams."
+        owner: "Service Reliability Owner"
+        start: "2026-10-01"
+        end: "2027-12-31"
+        effort_fte_months: 8.0
+        deliverables:
+          - id: D_RES1_SLO_1
+            name: "SLO catalog for critical services"
+            due: "2027-06-30"
+            owner: "Service Reliability Owner"
+            definition_of_done: ["SLOs approved by service owners", "Reporting automated"]
+            operational_kpis: ["KPI_INC", "KPI_E2E"]
+          - id: D_RES1_SLO_2
+            name: "Error budget decision policy rollout"
+            due: "2027-12-31"
+            owner: "IT Ops Head"
+            definition_of_done: ["Policy endorsed", "Used in monthly governance"]
+            operational_kpis: ["KPI_INC"]
+        control_impacts: ["Improves reliability governance quality"]
+        depends_on_workstreams: ["WS_RES1_RUN"]
+    milestones:
+      - id: MS_RES1_1
+        name: "Monitoring coverage baseline"
+        due: "2026-05-31"
+        deliverables: ["Coverage matrix", "Alert taxonomy", "SLO draft"]
+      - id: MS_RES1_2
+        name: "Incident playbooks deployed"
+        due: "2026-11-30"
+        deliverables: ["Runbooks", "On-call procedure", "Post-mortem template"]
+      - id: MS_RES1_3
+        name: "SLOs adopted and tracked"
+        due: "2027-06-30"
+        deliverables: ["SLO dashboards", "Error budget policy"]
+    kpi_impacts:
+      - kpi_id: KPI_INC
+        expected_delta_by_end: -10.0
+        confidence: 0.65
+        lag_months: 2
+    risks:
+      - id: R_RES1_1
+        category: "technical"
+        description: "Tooling integration complexity across legacy systems."
+        likelihood: 0.40
+        impact: 0.50
+        mitigations:
+          - "Start with top 5 critical services"
+          - "Progressive instrumentation"
+
+# ---------------------------------------------------------------------
+# PORTFOLIO CONSTRAINTS & STRATEGIC POLICIES
+# ---------------------------------------------------------------------
+portfolio:
+  constraints:
+    - id: C1
+      type: "budget"
+      description: "Annual budget ceiling for CMS transformation"
+      year_limits:
+        "2026": 600
+        "2027": 700
+        "2028": 500
+      currency: "EUR_k"
+    - id: C2
+      type: "capacity"
+      description: "Max delivery capacity (effective FTE) per year"
+      year_limits:
+        "2026": 10
+        "2027": 12
+        "2028": 8
+    - id: C3
+      type: "control"
+      description: "Minimum control coverage on automated flows"
+      min_value: 0.95
+
+  prioritization_rules:
+    - "Prefer initiatives with high objective-weighted impact per cost."
+    - "Penalize initiatives with hard dependencies at risk."
+    - "Never sacrifice compliance constraints for speed."
+
+# ---------------------------------------------------------------------
+# REPORTING TEMPLATES (to drive automated narrative later)
+# ---------------------------------------------------------------------
+reporting:
+  executive_summary:
+    required_sections:
+      - "What changed since last cycle?"
+      - "Are we on track vs 2026–2028 trajectory?"
+      - "Top risks and mitigations"
+      - "Decisions needed this cycle"
+  steering_committee:
+    cadence: "monthly"
+    decision_thresholds:
+      drift_confidence: 0.75
+      budget_overrun_pct: 0.10
+      milestone_delay_days: 30
+
+# ---------------------------------------------------------------------
+# AGENT CONFIG (human-in-the-loop + safety constraints)
+# ---------------------------------------------------------------------
+agent_policy:
+  autonomy_level: "recommend_only"      # recommend_only, approve_execute (not for bank PoC)
+  escalation:
+    if_confidence_below: 0.60
+    if_compliance_impact: "high"
+  recommendation_limits:
+    - "No more than 3 actions per objective per cycle"
+    - "Must include at least 1 low-risk alternative"
+  explanation_requirements:
+    include:
+      - "evidence (KPIs/milestones)"
+      - "assumptions"
+      - "trade-offs"
+      - "expected impact"
+      - "risks"

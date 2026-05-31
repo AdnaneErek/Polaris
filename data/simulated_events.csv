@@ -1,0 +1,28 @@
+date,type,initiative_id,description
+2020-01-01,regime_start,,Synthetic stress regime starts (higher volatility and adverse shocks).
+2020-05-01,regime_recovery,,Synthetic recovery regime starts (partial normalization).
+2020-06-01,kpi_shock,,Synthetic KPI_E2E shock (+0.01) lasting ~3 months.
+2020-07-01,regime_normal,,Synthetic KPI dynamics return to normal regime.
+2020-10-01,regime_start,,Synthetic stress regime starts (higher volatility and adverse shocks).
+2020-12-01,regime_recovery,,Synthetic recovery regime starts (partial normalization).
+2021-04-01,regime_normal,,Synthetic KPI dynamics return to normal regime.
+2021-08-01,kpi_shock,,Synthetic KPI_E2E shock (+0.01) lasting ~3 months.
+2021-09-01,regime_start,,Synthetic stress regime starts (higher volatility and adverse shocks).
+2021-09-01,kpi_shock,,Synthetic KPI_INC shock (+2.03) lasting ~3 months.
+2021-11-01,regime_recovery,,Synthetic recovery regime starts (partial normalization).
+2021-12-01,regime_normal,,Synthetic KPI dynamics return to normal regime.
+2022-03-01,kpi_shock,,Synthetic KPI_INC shock (+1.27) lasting ~4 months.
+2023-07-01,regime_start,,Synthetic stress regime starts (higher volatility and adverse shocks).
+2023-10-01,regime_recovery,,Synthetic recovery regime starts (partial normalization).
+2023-12-01,regime_normal,,Synthetic KPI dynamics return to normal regime.
+2024-07-01,kpi_shock,,Synthetic KPI_STP shock (-5.16) lasting ~4 months.
+2025-02-01,regime_start,,Synthetic stress regime starts (higher volatility and adverse shocks).
+2025-07-01,regime_recovery,,Synthetic recovery regime starts (partial normalization).
+2025-09-01,regime_normal,,Synthetic KPI dynamics return to normal regime.
+2026-02-01,regime_start,,Synthetic stress regime starts (higher volatility and adverse shocks).
+2026-03-01,regime_recovery,,Synthetic recovery regime starts (partial normalization).
+2026-04-01,regime_normal,,Synthetic KPI dynamics return to normal regime.
+2026-10-01,kpi_shock,,Synthetic KPI_STP shock (-1.00) lasting ~3 months.
+2026-12-01,kpi_shock,,Synthetic KPI_E2E shock (+0.19) lasting ~2 months.
+2028-05-01,kpi_shock,,Synthetic KPI_E2E shock (+0.55) lasting ~4 months.
+2028-12-01,kpi_shock,,Synthetic KPI_STP shock (-1.97) lasting ~3 months.

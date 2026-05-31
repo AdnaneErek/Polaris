@@ -1,0 +1,325 @@
+date,initiative_id,initiative_name,owner,progress,delay_months,budget_k
+2020-01-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2020-01-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2020-01-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2020-02-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2020-02-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2020-02-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2020-03-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2020-03-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2020-03-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2020-04-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2020-04-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2020-04-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2020-05-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2020-05-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2020-05-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2020-06-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2020-06-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2020-06-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2020-07-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2020-07-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2020-07-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2020-08-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2020-08-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2020-08-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2020-09-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2020-09-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2020-09-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2020-10-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2020-10-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2020-10-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2020-11-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2020-11-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2020-11-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2020-12-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2020-12-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2020-12-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2021-01-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2021-01-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2021-01-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2021-02-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2021-02-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2021-02-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2021-03-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2021-03-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2021-03-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2021-04-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2021-04-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2021-04-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2021-05-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2021-05-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2021-05-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2021-06-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2021-06-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2021-06-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2021-07-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2021-07-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2021-07-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2021-08-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2021-08-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2021-08-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2021-09-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2021-09-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2021-09-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2021-10-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2021-10-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2021-10-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2021-11-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2021-11-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2021-11-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2021-12-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2021-12-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2021-12-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2022-01-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2022-01-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2022-01-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2022-02-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2022-02-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2022-02-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2022-03-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2022-03-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2022-03-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2022-04-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2022-04-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2022-04-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2022-05-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2022-05-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2022-05-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2022-06-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2022-06-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2022-06-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2022-07-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2022-07-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2022-07-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2022-08-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2022-08-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2022-08-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2022-09-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2022-09-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2022-09-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2022-10-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2022-10-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2022-10-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2022-11-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2022-11-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2022-11-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2022-12-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2022-12-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2022-12-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2023-01-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2023-01-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2023-01-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2023-02-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2023-02-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2023-02-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2023-03-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2023-03-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2023-03-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2023-04-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2023-04-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2023-04-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2023-05-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2023-05-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2023-05-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2023-06-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2023-06-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2023-06-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2023-07-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2023-07-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2023-07-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2023-08-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2023-08-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2023-08-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2023-09-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2023-09-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2023-09-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2023-10-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2023-10-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2023-10-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2023-11-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2023-11-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2023-11-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2023-12-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2023-12-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2023-12-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2024-01-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2024-01-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2024-01-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2024-02-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2024-02-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2024-02-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2024-03-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2024-03-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2024-03-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2024-04-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2024-04-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2024-04-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2024-05-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2024-05-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2024-05-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2024-06-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2024-06-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2024-06-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2024-07-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2024-07-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2024-07-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2024-08-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2024-08-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2024-08-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2024-09-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2024-09-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2024-09-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2024-10-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2024-10-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2024-10-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2024-11-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2024-11-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2024-11-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2024-12-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2024-12-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2024-12-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2025-01-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2025-01-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2025-01-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2025-02-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2025-02-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2025-02-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2025-03-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2025-03-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2025-03-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2025-04-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2025-04-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2025-04-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2025-05-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2025-05-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2025-05-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2025-06-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2025-06-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2025-06-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2025-07-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2025-07-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2025-07-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2025-08-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2025-08-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2025-08-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2025-09-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2025-09-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2025-09-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2025-10-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2025-10-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2025-10-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2025-11-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2025-11-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2025-11-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2025-12-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2025-12-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2025-12-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2026-01-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.0,0,600.0
+2026-01-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.0,0,250.0
+2026-01-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2026-02-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.058834383706095436,0,600.0
+2026-02-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.1034841817604408,0,250.0
+2026-02-01,INIT_RES1,Observability & Incident Reduction,Ops,0.0,0,400.0
+2026-03-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.12029390315469958,0,600.0
+2026-03-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.1829082472082045,0,250.0
+2026-03-01,INIT_RES1,Observability & Incident Reduction,Ops,0.028294820153496505,0,400.0
+2026-04-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.17669856913679766,0,600.0
+2026-04-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.27252706265623267,0,250.0
+2026-04-01,INIT_RES1,Observability & Incident Reduction,Ops,0.07007645949999672,0,400.0
+2026-05-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.22766393526540996,0,600.0
+2026-05-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.3529425898041482,0,250.0
+2026-05-01,INIT_RES1,Observability & Incident Reduction,Ops,0.11520031669044395,0,400.0
+2026-06-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.2824756636315418,0,600.0
+2026-06-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.460135515397348,0,250.0
+2026-06-01,INIT_RES1,Observability & Incident Reduction,Ops,0.16142742341319377,0,400.0
+2026-07-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.33254937049922006,0,600.0
+2026-07-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.5501225184843974,0,250.0
+2026-07-01,INIT_RES1,Observability & Incident Reduction,Ops,0.19644922501202064,0,400.0
+2026-08-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.39190357875743276,0,600.0
+2026-08-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.6657547022425369,0,250.0
+2026-08-01,INIT_RES1,Observability & Incident Reduction,Ops,0.23864636176633475,0,400.0
+2026-09-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.46255253680644337,0,600.0
+2026-09-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.7794783314640517,0,250.0
+2026-09-01,INIT_RES1,Observability & Incident Reduction,Ops,0.2774291862341304,0,400.0
+2026-10-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.5170330675251081,0,600.0
+2026-10-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2026-10-01,INIT_RES1,Observability & Incident Reduction,Ops,0.31736893232895586,0,400.0
+2026-11-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.5703818184090499,0,600.0
+2026-11-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2026-11-01,INIT_RES1,Observability & Incident Reduction,Ops,0.3700568774884064,0,400.0
+2026-12-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.6335274835577428,0,600.0
+2026-12-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2026-12-01,INIT_RES1,Observability & Incident Reduction,Ops,0.41000550470205255,0,400.0
+2027-01-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.6955000159826845,0,600.0
+2027-01-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2027-01-01,INIT_RES1,Observability & Incident Reduction,Ops,0.4552383112592422,0,400.0
+2027-02-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.7552536711209012,0,600.0
+2027-02-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2027-02-01,INIT_RES1,Observability & Incident Reduction,Ops,0.5067227876277638,0,400.0
+2027-03-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.8058671883734759,0,600.0
+2027-03-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2027-03-01,INIT_RES1,Observability & Incident Reduction,Ops,0.5481982392226958,0,400.0
+2027-04-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.8644326134693883,0,600.0
+2027-04-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2027-04-01,INIT_RES1,Observability & Incident Reduction,Ops,0.5928911804755311,0,400.0
+2027-05-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9293911710675496,0,600.0
+2027-05-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2027-05-01,INIT_RES1,Observability & Incident Reduction,Ops,0.6390988905431412,0,400.0
+2027-06-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2027-06-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2027-06-01,INIT_RES1,Observability & Incident Reduction,Ops,0.6849883117312439,0,400.0
+2027-07-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2027-07-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2027-07-01,INIT_RES1,Observability & Incident Reduction,Ops,0.7220902038238505,0,400.0
+2027-08-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2027-08-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2027-08-01,INIT_RES1,Observability & Incident Reduction,Ops,0.7680638872127846,0,400.0
+2027-09-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2027-09-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2027-09-01,INIT_RES1,Observability & Incident Reduction,Ops,0.8227831378155679,0,400.0
+2027-10-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2027-10-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2027-10-01,INIT_RES1,Observability & Incident Reduction,Ops,0.8576889695556009,0,400.0
+2027-11-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2027-11-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2027-11-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9090029424284755,0,400.0
+2027-12-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2027-12-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2027-12-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9552712653309522,0,400.0
+2028-01-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2028-01-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2028-01-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9552712653309522,0,400.0
+2028-02-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2028-02-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2028-02-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9552712653309522,0,400.0
+2028-03-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2028-03-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2028-03-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9552712653309522,0,400.0
+2028-04-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2028-04-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2028-04-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9552712653309522,0,400.0
+2028-05-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2028-05-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2028-05-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9552712653309522,0,400.0
+2028-06-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2028-06-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2028-06-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9552712653309522,0,400.0
+2028-07-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2028-07-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2028-07-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9552712653309522,0,400.0
+2028-08-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2028-08-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2028-08-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9552712653309522,0,400.0
+2028-09-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2028-09-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2028-09-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9552712653309522,0,400.0
+2028-10-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2028-10-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2028-10-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9552712653309522,0,400.0
+2028-11-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2028-11-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2028-11-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9552712653309522,0,400.0
+2028-12-01,INIT_A1,Automation Wave 1 (priority flows),IT Ops,0.9763539838856224,0,600.0
+2028-12-01,INIT_DQ1,Data Quality & Reference Alignment,Data,0.8874739268313302,0,250.0
+2028-12-01,INIT_RES1,Observability & Incident Reduction,Ops,0.9552712653309522,0,400.0
