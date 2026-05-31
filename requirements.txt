@@ -1,0 +1,13 @@
+pydantic>=2.0
+pandas>=2.0
+numpy>=1.25
+rich>=13.0
+pyyaml>=6.0
+pytest>=7.0
+matplotlib>=3.7.0  # Optional: for visuals generation
+google-generativeai>=0.3.0  # Optional: for Gemini API narrative generation
+scikit-learn>=1.3.0  # For ML anomaly detection
+streamlit>=1.28.0  # For web dashboard
+plotly>=5.17.0  # For interactive charts (optional, but recommended)
+reportlab>=4.0.0  # For PDF report generation
+python-pptx>=1.0.2  # Optional: for generating PowerPoint slide decks
